@@ -40,5 +40,123 @@
                 <dt>ordered lsit 순차목록</dt>
                 <dd>순서에 영향을 많이 받는 목록을 이야기 합니다.</dd>
             </dl>
+
+            <!-- strong, em <> b, i -->
+            <strong> 강한 강조 </strong>
+            <em> 강조 </em>
+            <b> 볼트체 </b>
+            <i> 이텔릭체 </i>
+
+            <h3></h3>
+
+            <!-- ins 첨부하다, del 삭제하다, u 밑줄, strike 가운데줄 -->
+            <ins> 추가 하고 싶은 정보 </ins>
+            <del> 쓸모 없는 정보나 관계 없는 정보 </del>
+            <u> 밑줄형태 </u>
+            <strike> 가운데줄 형태 </strike>
+
+            <h3></h3>
+
+            <!-- sup 위첨자, sub 아래첨자 -->
+            2<sup>2</sup> : 2의 2제곱
+            H<sub>2</sub>0 : 물에 대한 화학식
+
+            <h3></h3>
+
+            <!-- a anchor : 닻 -->
+            <a href="./index.html">버튼</a>
+            <!-- file:///C:/Users/82109/Documents/GitHub/DP2019/index.html 내 컴퓨터 주소이기 때문에 다른사람에게는 안보일 것-->
+
+            <h3></h3>
+
+            <!-- img image 이미지 -->
+            <img src="./images/cat.jpg" /> 
+            <img src="images/cat.jpg" /> 
+            <img src="./images/cat.jpg" width="100px" />
+            <img src="./images/cat.jpg" height="100px"/>
+            <img src="./images/cat.jpg" width="80px" height="40px"/>
+
+
+            <h3></h3>
+            <h3></h3>
+
+
+            <!-- table 도표 -->
+            <!-- table, tr, td -->
+            <style>
+                table, tr, td{
+                    border: solid 1px black;
+                }
+            </style>
+            <table>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                    </tr>
+            </table>
+
+            
+            <!-- colspan, rowspan -->
+            <!-- thead, tbody, tfoot -->
+
+            <table summary="요약">
+                <caption>[도표1] 도표제목</caption>
+                <thead>
+                    <tr> <!-- colume -->
+                      <th scope="col">제목1</th>
+                      <th scope="col">제목2</th>
+                      <th scope="col">제목3</th>
+                      <th scope="col">제목4</th>
+                      <th scope="col">제목5</th>
+                    </tr>
+                </thead>
+                    <tr>
+                        <td colspan="2">1</td>  <!-- 가로로 2칸 사용하기 -->
+                        <td rowspan="2">2</td>  <!-- 세로로 2칸 사용하기 -->
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                        </tr>
+                </table>
+
+
+            
+                <style>
+                        table{
+                            border: 1px solid black;
+                        }
+                        td{
+                            border: 1px solid black; width: 10px ;
+                        }
+                    </style>
+                    <table>
+                        <tr>
+                            <td colspan="2">up</td>
+                            <td rowspan="2">right</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">left</td>
+                            <td>center</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">down</td>
+                        </tr>
+                    </table>
+
+
+
         </body>
 </html>
