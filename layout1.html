@@ -5,8 +5,69 @@
         <meta charset="utf-8"/>
         <style>
             header, nav, div, footer, h1, h2, h3, ul ,li, img{
-                border: solid 1px black;
-                margin: 5px;
+                /* border: solid 1px black; */
+                /* margin: 5px; */
+            }
+            .clear{
+                clear: both; /* float을 해제한다 */
+                height: 0px; /* 높이 : 0px */
+                overflow: hidden; /* 넘치면 : 숨김 */
+            }
+            .float_left{ float: left; }
+            .float_right{ float: right; }
+            .content_part{
+                width: 480px;
+            }
+            #zoom{
+                margin: 9px;
+            }
+            header>h1{
+                margin: 0px;
+            }
+            header>ul{
+                padding: 0px; /* 안쪽 여백 : 0px */
+                margin-top: 11px;
+                margin-bottom: 11px;
+                margin-right: 100px;
+                margin-left: 100px;
+            }
+            header>ul>li{
+                float: left; /* 둥둥떠다님 : 왼쪽기준 */
+                list-style: none; /* 목록 모양 : 없음 (왼쪽 동그라미) */
+                padding-left: 10px;
+                padding-right: 10px;
+                border-right: solid 2px gray;
+            }
+            header>ul>li:nth-child(5){
+                border: none; /* 경계선 없음 */
+            }
+            nav{
+                background: #eee;
+            }
+            nav>h2{
+                margin: 0px;
+            }
+            nav>ul{
+                padding: 0px;
+                margin: 6px;
+            }
+            nav>ul>li{
+                float: left;
+                list-style: none;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            div>section:nth-child(1){
+                background: #98f;
+            }
+            div>section:nth-child(2){
+                background: #5d9;
+            }
+            div>section:nth-child(3){
+                background: #f76;
+            }
+            div>section:nth-child(4){
+                background: #ec5;
             }
         </style>
     </head>
@@ -14,35 +75,40 @@
         <a href="index.html">돌아가기</a>
         <div id="wrap">
             <header>
-                <h1><img src="images/logo_bluebox.png"></h1>
-                <ul>
+                <h1 class="float_left"><img src="images/logo_bluebox.png"></h1>
+                <ul class="float_left">
                     <li>ABOUT</li>
                     <li>SERVICES</li>
                     <li>WORKS</li>
                     <li>BLOG</li>
                     <li>CONTACT US</li>
+                    <div class="clear"></div>
                 </ul>
-                <div><img src="images/zoom.png"></div>
+                <div id="zoom" class="float_right"><img src="images/zoom.png"></div>
+                <div class="clear"></div>
             </header>
             <nav>
-                <h2>See Our Works</h2>
-                <ul>
+                <h2 class="float_left">See Our Works</h2>
+                <ul class="float_right">
                     <li>Web Design</li>
                     <li>Icons</li>
                     <li>Illustrations</li>
                     <li>Misc</li>
+                    <div class="clear"></div>
                 </ul>
+                <div class="clear"></div>
             </nav>
             <div>
                 <section>
                     <h3>Web Design</h3>
-                    <div>
+                    <div class="content_part">
                         <img src="images/web_design_1.png"/>
                         <dl>
                             <dt>Lorem ipsum dolor sit amet</dt>
                             <dd>Consectetur adipiscing elit. Suspendisse sed leo tellus. Praesent nec vehicula ligula, non laoreet ligula. Maecenas at massa eget orci porttitor semper. </dd>
                         </dl>
-                    </div>                    <div>
+                    </div>
+                    <div class="content_part">
                             <img src="images/web_design_2.png"/>
                             <dl>
                                 <dt>Lorem ipsum dolor sit amet</dt>
@@ -52,14 +118,14 @@
                     </section>
                     <section>
                         <h3>Icons</h3>
-                        <div>
+                        <div class="content_part">
                             <img src="images/Icons_1.png"/>
                             <dl>
                                 <dt>Lorem ipsum dolor sit amet</dt>
                                 <dd>Consectetur adipiscing elit. Suspendisse sed leo tellus. Praesent nec vehicula ligula, non laoreet ligula. Maecenas at massa eget orci porttitor semper. </dd>
                             </dl>
                         </div>
-                        <div>
+                        <div class="content_part">
                             <img src="images/Icons_2.png"/>
                             <dl>
                                 <dt>Lorem ipsum dolor sit amet</dt>
@@ -69,14 +135,14 @@
                         </section>
                     <section>
                         <h3>Illustrations</h3>
-                        <div>
+                        <div class="content_part">
                             <img src="images/illustrations_1.png"/>
                             <dl>
                                 <dt>Lorem ipsum dolor sit amet</dt>
                                 <dd>Consectetur adipiscing elit. Suspendisse sed leo tellus. Praesent nec vehicula ligula, non laoreet ligula. Maecenas at massa eget orci porttitor semper. </dd>
                             </dl>
                         </div>
-                        <div>
+                        <div class="content_part">
                             <img src="images/illustrations_2.png"/>
                             <dl>
                                 <dt>Lorem ipsum dolor sit amet</dt>
@@ -86,14 +152,14 @@
                         </section>
                     <section>
                         <h3>Miscellaneous</h3>
-                        <div>
+                        <div class="content_part">
                             <img src="images/Misc_1.png"/>
                             <dl>
                                 <dt>Lorem ipsum dolor sit amet</dt>
                                 <dd>Consectetur adipiscing elit. Suspendisse sed leo tellus. Praesent nec vehicula ligula, non laoreet ligula. Maecenas at massa eget orci porttitor semper. </dd>
                             </dl>
                         </div>
-                        <div>
+                        <div class="content_part">
                             <img src="images/Misc_2.png"/>
                             <dl>
                                 <dt>Lorem ipsum dolor sit amet</dt>
@@ -102,7 +168,26 @@
                         </div>
                     </section>
             </div>
-            <footer>footer</footer>
+            <footer>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Work</li>
+                    <li>Blog</li>
+                    <li>Contact us</li>
+                </ul>
+                <p>ⓒ 2013 BlueBox. All Right Reserved.</p>
+                <p>the loges in the design are the property of their respective owners/copyright holders.</p>
+                <ul>
+                    <li><img src="images/layout1_footer_icon1.png"/></li>
+                    <li><img src="images/layout1_footer_icon2.png"/></li>
+                    <li><img src="images/layout1_footer_icon3.png"/></li>
+                    <li><img src="images/layout1_footer_icon4.png"/></li>
+                    <li><img src="images/layout1_footer_icon5.png"/></li>
+                    <li><img src="images/layout1_footer_icon6.png"/></li>
+                </ul>
+            </footer>
         </div>
     </body>
 </html>
