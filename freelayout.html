@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>배틀그라운드 전적검색</title>
+        <meta charset="utf=8">
+        <style>
+            #wrap{
+                min-width: 1000px;
+                max-width: 1920px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+            .float_left{
+                float: left;
+            }
+            .float_right{
+                float: right;
+            }
+            .clear{
+                clear: both;
+                height: 0px;
+                overflow: hidden;
+            }
+            header{
+                background-color: black;
+                color: white;
+            }
+            header>h1{
+                padding: 5px 0px 0px 0px;
+                margin: 18px 50px;
+            }
+            header>nav>div{
+                color: yellow;
+                font-size: 35px;
+                padding-top: 20px;
+                padding-right: 50px;
+                font-weight: bold;
+            }
+            header>nav>ul>li{
+                list-style: none;
+                padding-top: 34px;
+                padding-right: 35px;
+                float: left;
+            }
+            header>nav>ul>li:nth-child(7){
+                padding-left: 42px;
+                padding-top: 31px;
+                font-size: 20px;
+                color: red;
+            }
+            #main{
+                background-image: url("images/free_visual.png");
+                background-size: cover;
+                
+                color: white;
+                padding: 200px;
+                margin-bottom: 500px;
+            }
+            #main>h2{
+                margin: 0px;
+                font-size: 30px;
+            }
+            #main>h2:nth-child(2){
+                font-size: 50px;
+            }
+            #main>h2:nth-child(3){
+                font-size: 25px;
+                color: yellow;
+            }
+            #main>video{
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <header>
+                <h1 class="float_left"><img src="images/free_logo.png"></h1>
+                <nav>
+                    <ul>
+                        <li>홈</li>
+                        <li>공지사항</li>
+                        <li>업데이트</li>
+                        <li>대회소식</li>
+                        <li>이벤트</li>
+                        <li>랭킹</li>
+                        <li>PUBG홈페이지</li>
+                    </ul>
+                    <div class="float_right">전적   검색</div>
+                </nav>
+                <div class="clear"></div>
+            </header>
+            <div id="main">
+                <h2>PLAYERUNKNOWN'S</h2>
+                <h2>BATTLEGROUND</h2>
+                <h2>SEASON 5</h2>
+                <input type="text" placeholder="플레이어 닉네임을 입력하세요" />
+                <button>검색</button> 
+                <video controls >
+                        <source src="./media/free_video.mp4" type="video/mp4" />
+                </video>
+                <div class="clear"></div>
+            </div>
+            <footer>footer</footer>
+        </div>
+    </body>
+</html>

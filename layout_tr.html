@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf=8">
+        <style>
+            .clear{
+                clear: both; /* float을 해제한다 */
+                height: 0px; /* 높이 : 0px */
+                overflow: hidden; /* 넘치면 : 숨김 */
+            }
+            .float_left{
+                float: left;
+            }
+            .float_right{
+                float: right;
+            }
+            #wrap{
+                min-width: 1000px;
+                max-width: 1920px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+            #main_visual{
+                background-image: url("images/free_background.png");
+                background-size: 100% auto; /* 가로 세로 */
+                background-size: cover; /* 표지처럼 */
+                background-repeat: no-repeat; /* 반복 방식 */
+                /* repeat(반복) no-repeat(반복하지않음) repeat-x(x축반복) repeat-y(y축반복) */
+                background-color: black;
+                background-position: 50% 50%; /* 가로 세로 */
+                color: white;
+                text-align: center;
+                padding: 100px 0px;
+            }
+            #main_visual>h2{
+                font-size: 50px;
+                letter-spacing: 15px;
+                margin: 8px 0px;
+            }
+            #top_title{
+                font-size: 25px;
+            }
+            #bottom_size{
+                font-size: 15px;
+            }
+            #button_container{
+                margin-top: 100px;
+            }
+            body{
+                margin: 0px;
+            }
+            header{
+                background-color: black;
+                color: white; /* 글자 색상은 상속됩니다. */
+                padding: 10px 50px;
+            }
+            header>h1{
+                margin: 0px;
+                padding: 10px;
+                border: solid 2px white;
+            }
+            header>nav>ul{
+                margin: 12px 0px;
+            }
+            header>nav>ul>li{
+                float: left;
+                list-style: none;
+                padding: 0px 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <a href="index.html">돌아가기</a>
+        <div id="wrap">
+            <header>
+                <h1 class="float_left">
+                    PUBG
+                </h1>
+                <nav class="float_left">
+                    <ul>
+                        <li>HOME</li>
+                        <li>ABOUT ME</li>
+                        <li>SERVICES</li>
+                        <li>MY WORK</li>
+                        <li>CONTACT ME</li>
+                        <div class="clear"></div>
+                    </ul>
+                </nav>
+                <div class="clear"></div>
+            </header>
+            <div id="main_visual">
+                <div id="top_title">Lorem ipsum dolor sit iusmod tempor</div>
+                <h2>INCIDIDUNT BORE</h2>
+                <div id="bottom_title">Orem ipsum dolor sit amet, consectetur</div>
+                <div id="button_container"></div>
+            </div>
+    </body>
+</html>
