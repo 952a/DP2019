@@ -10,6 +10,9 @@
                 margin-right: auto;
                 margin-left: auto;
             }
+            body{
+                margin: 0px;
+            }
             .float_left{
                 float: left;
             }
@@ -38,23 +41,30 @@
             }
             header>nav>ul>li{
                 list-style: none;
-                padding-top: 34px;
                 padding-right: 35px;
+                padding-top: 18px;
                 float: left;
+            }
+            header>nav>ul>li:nth-child(1)>a{
+                text-decoration: none;
+                color: white;
             }
             header>nav>ul>li:nth-child(7){
                 padding-left: 42px;
-                padding-top: 31px;
+                padding-top: 15px;
+            }
+            header>nav>ul>li:nth-child(7)>a{
+                padding-left: 42px;
                 font-size: 20px;
+                font-weight: bold;
                 color: red;
+                text-decoration: none;
             }
             #main{
                 background-image: url("images/free_visual.png");
                 background-size: cover;
-                
                 color: white;
-                padding: 200px;
-                margin-bottom: 500px;
+                padding: 200px 100px;
             }
             #main>h2{
                 margin: 0px;
@@ -67,26 +77,59 @@
                 font-size: 25px;
                 color: yellow;
             }
+            #main>select{
+                margin: 0px 8px 0px 0px;
+            }
             #main>video{
                 float: right;
+                width: 800px;
+            }
+            footer{
+                background-color: #c9c1b9;
+                padding: 50px 0px;
+            }
+            .footer_copy{
+                float: left;
+            }
+            .footer_copy>li{
+                float: left;
+                list-style: none;
+                padding: 0px 15px;
+                color: #7d7d7d;
+                font-weight: bold;
+                border-right: solid 2px #7d7d7d;
+            }
+            .footer_copy>li:nth-child(4){
+                border-right: none;
+            }
+            .footer_icon{
+                list-style: none;
+                margin: 16px 0px;
+                padding: 0px;
+                float: right;
+            }
+            .footer_icon>li{
+                float: left;
+                padding: 0px 17px;
             }
         </style>
     </head>
     <body>
         <div id="wrap">
             <header>
-                <h1 class="float_left"><img src="images/free_logo.png"></h1>
+                <h1 class="float_left"><img src="images/free_logo.png"/></h1>
                 <nav>
-                    <ul>
-                        <li>홈</li>
-                        <li>공지사항</li>
-                        <li>업데이트</li>
-                        <li>대회소식</li>
-                        <li>이벤트</li>
-                        <li>랭킹</li>
-                        <li>PUBG홈페이지</li>
+                    <ul class="float_left">
+                        <li><a href="freeindex.html">HOME</a></li>
+                        <li>NOTICE</li>
+                        <li>UPDATE</li>
+                        <li>ESPORTS</li>
+                        <li>EVENT</li>
+                        <li>RANKING</li>
+                        <li><a href="https://www.pubgesports.kr/">PUBG 홈페이지</a></li>
+                        <div class="clear"></div>
                     </ul>
-                    <div class="float_right">전적   검색</div>
+                    <div class="float_right">전적검색</div>
                 </nav>
                 <div class="clear"></div>
             </header>
@@ -94,14 +137,33 @@
                 <h2>PLAYERUNKNOWN'S</h2>
                 <h2>BATTLEGROUND</h2>
                 <h2>SEASON 5</h2>
+                <select>
+                    <option>서버</option>
+                    <option>스팀</option>
+                    <option>카카오</option>
                 <input type="text" placeholder="플레이어 닉네임을 입력하세요" />
-                <button>검색</button> 
+                <button>검색</button>
                 <video controls >
                         <source src="./media/free_video.mp4" type="video/mp4" />
                 </video>
                 <div class="clear"></div>
+
             </div>
-            <footer>footer</footer>
+            <footer>
+                <ul class="footer_copy">
+                    <li>회사소개</li>
+                    <li>인재채용</li>
+                    <li>고객센터</li>
+                    <li>copyright2019</li>
+                </ul>
+                <ul class="footer_icon">
+                    <li><img src="images/free_footer_icon1.png"></li>
+                    <li><img src="images/free_footer_icon2.png"></li>
+                    <li><img src="images/free_footer_icon3.png"></li>
+                    <div class="clear"></div>
+                </ul>
+                <div class="clear"></div>
+            </footer>
         </div>
     </body>
 </html>
